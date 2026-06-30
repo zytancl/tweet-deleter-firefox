@@ -1,72 +1,57 @@
-## 트윗 청소기 
+## Tweet Deleter (Firefox)
 
-> 트윗 청소를 도와드립니다.
+> Helps with deleting tweets.
 
+## Note From The Forker
 
-## 주의 사항
+This is a **fork of https://github.com/ketrewq/tweet-deleter to port into Firefox**, as it was made only for Chrome and Edge.
 
-- 트위터 트윗 로딩 특성상 **여러번 돌려야** 다 지워집니다.
+To be frank, this extension doesn't work well, unlike what the original creator had said. Based on my personal experience, this only works for tweets up to less than a month (and/or less than 100 tweets). This is only ideal if you just want to quickly delete your recent tweets.
 
-- 2025년 4월 이전의 트윗은 트위터 API의 자체적인 업데이트로 인해 지워지지 않을 수 있습니다. (테스트해보지 않음, 지워진다는 제보 있었음)
+If you wish to delete every tweets (and more), use this userscript instead, it works amazingly well because it requires you to upload your Twitter archive and deletes everything you want:
+- https://github.com/lucahammer/tweetXer
 
-- 1.3 업데이트에서 작동하지 않는 날짜 필터를 없앴습니다. 
+Additionally, because the extension is made only in Korean, I added a toggle where it comes in English too.
 
-- https://github.com/Lyfhael/DeleteTweets 의 코드를 참고하였습니다.
+If you are facing any issues, **contact the original creator instead** because all I'm responsible for is just converting to Firefox and Firefox-based browsers.
 
+## Precautions
 
-## 설치 방법 
+- Due to the characteristics of Twitter tweet loading, you may need to run it multiple times to delete everything.
 
-해당 소프트웨어를 사용한 책임은 모두 **사용자**에게 있습니다. 
+- Tweets from before April 2025 may not be deleted due to Twitter API's own updates. (Not tested, but there were reports that they were deleted)
 
-고마우신 분께서 친절한 가이드를 추가해주셔서 첨부합니다. 
+- 1.3 Update removed the date filter that was not working.
 
+- Original code source: https://github.com/Lyfhael/DeleteTweets
 
-https://x.com/SUNAEOJISANG/status/1936707317405528150 
+## Installation method
 
+All responsibility for using this software rests with the user.
 
-1. 깃헙에서 우측의 녹색 버튼을 클릭하고, 아래에 나오는 “Download ZIP” 을 클릭합니다.
+Attached is a kind guide from those who are grateful.
 
-2. 다운받은 ZIP 파일의 압축을 풀어줍니다.
+https://x.com/SUNAEOJISANG/status/1936707317405528150
 
-3. 크롬이나 엣지 브라우저의 익스텐션 메뉴에서 개발자 모드를 열고 다운받은 익스텐션을 엽니다.
+1. Click the green button on the right side on GitHub, and click “Download ZIP” below.
 
+2. Unzip the downloaded ZIP file.
 
- - 크롬은 chrome://extensions
+3. In Firefox (and Firefox-based browsers), go to "about:debugging", "This (Firefox/Zen/Waterfox/etc.)", and click on "Load Temporary Add-on...".
 
- - 엣지는 edge://extensions
+4. Finally, select the manifest.json from the unzipped folder.
 
+## Usage
 
-를 주소창에 입력해 이동하고 
+1. Go to the reply (Your Profile > Reply) tab.
+    
+2. Wait until all replies are loaded, then click the extension button.
+3. Leave it as is. Press F12 to check progress in developer tools (console).
 
-4. ”Developer mode/개발자 모드” 를 켭니다. 그 다음에 “Load Unpacked” 를 클릭합니다.
+## Contributing
 
-5. 압축을 풀은 폴더 또는 그 아래의 폴더 중에서 manifest.json 이라는 파일이 있는 폴더를 선택합니다.
+- Not working / This could be improved / Accidentally deleted -> Feedback is also welcome!
 
-6. 익스텐션이 정상적으로 설치되었는지 확인합니다.
+- This is a beta testing stage at the PoC level. The filtering feature may have errors. Please proceed with some risk.
 
-## 사용 방법 
-
-1. reply(본인 프로필 > 답글) 탭으로 갑니다. 
-
-2. 답글이 다 로딩될 때까지 기다리고 확장프로그램 버튼을 누릅니다. 
-
-3. 그대로 유지합니다. F12를 눌러 developer tools(개발자 도구) > console(콘솔) 에서 진행사항을 확인하실 수 있습니다.
-
-
-## 컨트리뷰팅 
-
-- 안돌아가요/ 이게 개선됐으면 좋겠어요/ 잘못 삭제됐어요 -> 마찬가지로 피드백 환영입니다!
-
-- PoC 수준의 베타 테스팅 단계입니다. 특히 필터링 기능은 에러가 있을 수 있습니다. 어느정도 위험은 감수하고 써주세요.
-
-- 자유롭게 이슈를 열어주시거나, 컨트리뷰팅 하거나, 트위터 디엠 @booleanistic 으로 문의주세요. 
-
-
-## TODO 
-
-- [ ] 옛날 트윗 청소 테스트
-- [ ] 지우지 않는 트윗 마음찍은 것으로 필터링
-- [ ] 프론트엔드에 progress bar
-- [ ] 각종 UI/UX 수정
-- [x] 404에러 retry 너무 느리지 않게 개선 
-- [ ] 없는 트윗이 카운트되는 현상 개선 
+- Feel free to open issues, contribute, or contact via Twitter DM @booleanistic. (original creator)
